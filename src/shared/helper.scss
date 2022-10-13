@@ -1,0 +1,4 @@
+//rem适配
+@function px($n){
+    @return $n / 1552 * 100rem
+}

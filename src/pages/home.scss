@@ -1,0 +1,177 @@
+// @function px($n){
+//       @return $n / 1723 * 100rem
+// }
+@import "../shared/helper.scss";
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  >main {
+    background: #051115;
+    display: grid;
+    flex: 1;
+    grid-template:
+      "box1 box2 box3"
+      "box4 box8 box6"
+      "box5 box8 box7"
+    ;
+    grid-column-gap: px(30);
+    grid-row-gap: px(10);
+    grid-template-rows: px(250) px(220) px(220);
+    grid-template-columns: 365fr 720fr 365fr;
+    padding-top: 30px;
+    >section{
+      border: 1px solid #10364E;
+      border-radius: 4px;
+      position: relative;
+      background-color: #081037;
+      &::before{
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 4px;
+        box-shadow: 
+        11px 0 0 -10px #071D2A,
+        -11px 0 0 -10px #071D2A,
+        0 11px 0 -10px #071D2A,
+        0 -11px 0 -10px #071D2A
+      }
+    }
+    >.section1 {
+      grid-area: box1;
+      
+    }
+
+    >.section2 {
+      grid-area: box2;
+      display: flex;
+      .ShowNum{
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: center;
+        .num{
+          color: #F2F0EC;
+          border: 1px solid #10374F;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-direction: column;
+          width: 30%;
+          height: px(100);
+          .num_num{
+            font-size: px(32);
+          }
+          .num_txt{
+            font-size: px(12);
+            color: #899673;
+          }
+        }
+      }
+    }
+
+    >.section3 {
+      grid-area: box3;
+      
+    }
+
+    >.section4 {
+      grid-area: box4;
+   
+    }
+
+    >.section5 {
+      grid-area: box5;
+
+    }
+
+    >.section6 {
+      grid-area: box6;
+   
+    }
+
+    >.section7 {
+      grid-area: box7;
+      
+    }
+
+    >.section8 {
+      grid-area: box8;
+  
+    }
+  }
+
+  .x {
+
+    height: px(65);
+    background-color:#07141D ;
+    display: flex;
+    // border: 1px solid yellow;
+    // background-size: 100% 100%;
+    .header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      font-size: px(32);
+      text-shadow: 0 0 px(3) #fff;
+      padding: 0 px(20) 0 px(20);
+      .weather{
+        font-size: px(16);
+      }
+    }
+  }
+  .chartheader{
+    height: px(40);
+    border: 1px solid #0764BC;
+    border-radius: 4px;
+    font-size: px(18);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 px(3) #fff;
+    &::before{
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 4px;
+      box-shadow: 
+      11px 0 0 -10px rgb(14, 50, 95),
+      -11px 0 0 -10px rgb(14, 50, 95),
+      0 11px 0 -10px rgb(14, 50, 95),
+      0 -11px 0 -10px rgb(14, 50, 95)
+    }
+  }
+  .statistics{
+    height: px(250);
+    padding: px(10);
+    display: flex;
+    flex-direction: column;
+    .chart{
+      flex: 1;
+    }
+  }
+  .chinaMap{
+    height: px(440);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .tips{
+      position: absolute;
+      bottom: px(20);
+      left: px(10);
+    }
+  }
+}
